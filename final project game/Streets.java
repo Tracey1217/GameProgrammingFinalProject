@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Streets extends World
 {
-
+    GreenfootSound sMusic = new GreenfootSound("City soundtrack.wav");
     /**
      * Constructor for objects of class Streets.
      * 
@@ -37,5 +37,9 @@ public class Streets extends World
         addObject(zombie3,359,556);
         Zombie zombie4 = new Zombie();
         addObject(zombie4,435,563);
+    }
+    public void act()
+    {
+        sMusic.play();
     }
 }

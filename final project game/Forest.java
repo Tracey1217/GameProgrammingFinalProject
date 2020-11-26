@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Forest extends World
 {
-
+    GreenfootSound fMusic = new GreenfootSound("Forest soundtrack.wav");
     /**
      * Constructor for objects of class Forest.
      * 
@@ -29,5 +29,9 @@ public class Forest extends World
         addObject(player,754,355);
         Door door = new Door(2);
         addObject(door,145,352);
+    }
+    public void act()
+    {
+        fMusic.play();
     }
 }
