@@ -40,4 +40,13 @@ public class Hopsital extends World
     {
         hMusic.play();
     }
+    public void started()
+    {
+     hMusic.playLoop();   
+    }
+    public void stopped()
+    {
+     hMusic.stop();   
+    }
+    
 }

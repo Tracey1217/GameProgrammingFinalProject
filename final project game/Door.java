@@ -9,7 +9,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Door extends Actor
 {
     private int worldNum;
-    
     public Door(int worldNum) {
         this.worldNum = worldNum;
     }
@@ -49,21 +48,26 @@ public class Door extends Actor
     
     public void transitionToStreets() {
         World streets = new Streets();
+        getWorld().stopped();
         Greenfoot.setWorld(streets);
+        
     }
      
     public void transitionToForest() {
         World forest = new Forest();
+        getWorld().stopped();
         Greenfoot.setWorld(forest);
     } 
      
     public void transitionToBeach() {
         World beach = new Beach();
+        getWorld().stopped();
         Greenfoot.setWorld(beach);
     } 
      
     public void transitionToWinWorld() {
         World winWorld = new WinScreen();
+        getWorld().stopped();
         Greenfoot.setWorld(winWorld);
     }
     

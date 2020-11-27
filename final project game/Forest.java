@@ -34,4 +34,12 @@ public class Forest extends World
     {
         fMusic.play();
     }
+    public void started()
+    {
+        fMusic.playLoop();
+    }
+    public void stopped()
+    {
+        fMusic.stop();
+    }
 }

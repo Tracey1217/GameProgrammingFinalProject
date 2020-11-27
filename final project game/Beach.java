@@ -34,4 +34,12 @@ public class Beach extends World
     {
         bMusic.play();
     }
+    public void started()
+    {
+        bMusic.playLoop();
+    }
+    public void stopped()
+    {
+        bMusic.stop();
+    }   
 }

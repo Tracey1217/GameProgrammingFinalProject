@@ -1,3 +1,4 @@
+
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
@@ -8,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Streets extends World
 {
-    GreenfootSound sMusic = new GreenfootSound("City soundtrack.wav");
+     private GreenfootSound sMusic = new GreenfootSound("City soundtrack.wav");
     /**
      * Constructor for objects of class Streets.
      * 
@@ -17,6 +18,7 @@ public class Streets extends World
     {
         super(900, 600, 1);
         prepare();
+        
     }
 
     /**
@@ -41,5 +43,13 @@ public class Streets extends World
     public void act()
     {
         sMusic.play();
+    }
+    public void started()
+    {
+        sMusic.playLoop();
+    }
+    public void stopped()
+    {
+        sMusic.stop();
     }
 }
