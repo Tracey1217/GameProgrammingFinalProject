@@ -11,20 +11,21 @@ public class Player extends Actor
     private int firingRate = 20;
     private int firingCounter = 0;
     private final int grav = 1;
-    private int velocity = 4;
+    private int velo = 4; //velocity
     /**
      * Act - do whatever the Player wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public Player(){
-        velocity = 0;
+        velo = 0;
     }
     public void act() 
     {
         move();
         shoot();
         fall();
-        if (Greenfoot.isKeyDown("j") && getY() > getWorld().getHeight() -30) jump();
+        if (Greenfoot.isKeyDown("j") && 
+        getY() > getWorld().getHeight() -30) jump();
     } 
     public void move() {
         if (Greenfoot.isKeyDown("a")) {
@@ -49,11 +50,11 @@ public class Player extends Actor
         }
     }
     public void jump(){
-     velocity=-10;   
+     velo=-10;   
     }    
     public void fall(){
-        setLocation(getX(),getY() + velocity);
-        if (getY() > getWorld().getHeight() - 30) velocity = 0;
-        else velocity += grav;
+        setLocation(getX(),getY() + velo);
+        if (getY() > getWorld().getHeight() - 30) velo = 0;
+        else velo += grav;
     }
 }
